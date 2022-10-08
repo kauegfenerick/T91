@@ -2,7 +2,7 @@
 
 @section('conteudo')
     <h1><i class="bi bi-people-fill"></i>Usuários</h1>
-    <a href="{{ route('usuario.create') }}" class="btn btn-dark">
+    <a href="{{ route('user.create') }}" class="btn btn-dark">
         Novo
     </a>
     <table class="table table-striped table-border table-hover">
@@ -17,24 +17,24 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($usuarios as $usuario)
+            @foreach ($users as $user)
                 
                 <tr>
                     <td> 
-                        <a href="{{ route('usuario.show', ['id'=>$usuario->id_usuario]) }}" class="btn btn-secondary">
+                        <a href="{{ route('user.show', ['id'=>$user->id]) }}" class="btn btn-secondary">
                             <i class="bi bi-eye-fill"></i>
                         </a>
-                        <a href="{{ route('usuario.edit', ['id'=>$usuario->id_usuario]) }}" class="btn btn-dark">
+                        <a href="{{ route('user.edit', ['id'=>$user->id]) }}" class="btn btn-dark">
                             <i class="bi bi-pencil-square"></i>
                         </a>
-                        <a href="{{ route('usuario.destroy', ['id'=>$usuario->id_usuario]) }}" class="btn btn-danger">
+                        <a href="{{ route('user.destroy', ['id'=>$user->id]) }}" class="btn btn-danger">
                             <i class="bi bi-file-x-fill"></i>
                         </a>
                     </td>
-                    <td>{{ $usuario->nome}}</td>
-                    <td>{{ $usuario->email}}</td>
-                    <td>{{ $usuario->dt_nascimento}}</td>
-                    <td><img src="{{$usuario->foto}}"></td>
+                    <td>{{ $user->name}}</td>
+                    <td>{{ $user->email}}</td>
+                    <td>{{ $user->dt_nascimento}}</td>
+                    <td><img class="img-thumbnail" src="{{$user->foto}}" width="230"></td>
                 </tr>
             @endforeach
         </tbody>

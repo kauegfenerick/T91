@@ -44,7 +44,7 @@
                            <i class="bi bi-house-door-fill"></i>
                            Home
                         </a>
-                        <a class="nav-link" href="{{route('usuario.index')}}">
+                        <a class="nav-link" href="{{route('user.index')}}">
                             <i class="bi bi-people-fill"></i>
                             Usuários
                         </a>                                          
